@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Brick Breaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags for SEO & Sharing -->
+    <meta name="description" content="A premium, neon-styled block breaker game built with HTML5 Canvas.">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="start-screen" class="screen active">
+                <h1 class="neon-text">NEON<br>BREAKER</h1>
+                <p>MOUSE to move • CLICK to launch</p>
+                <button type="button" id="start-btn" class="glow-button">START GAME</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h2 class="neon-text-red">GAME OVER</h2>
+                <p id="final-score">Score: 0</p>
+                <button type="button" id="restart-btn" class="glow-button">TRY AGAIN</button>
+            </div>
+
+            <div id="win-screen" class="screen hidden">
+                <h2 class="neon-text-green">VICTORY</h2>
+                <p>You cleared all blocks!</p>
+                <button type="button" id="play-again-btn" class="glow-button">PLAY AGAIN</button>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div class="score-container">SCORE: <span id="score">0</span></div>
+                <div class="lives-container">LIVES: <span id="lives">3</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
