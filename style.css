@@ -206,9 +206,9 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 340px;
+    width: 240px;
     height: 100vh;
-    background: white;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
     padding: 20px;
     box-shadow: var(--shadow-md);
     z-index: 1000;
@@ -218,8 +218,10 @@ img {
 }
 
 .main-content {
-    margin-left: 340px;
-    width: calc(100% - 340px);
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    min-height: 100vh;
 }
 
 .sidebar-header {
@@ -491,6 +493,20 @@ img {
 
 .feature-content {
     padding: 30px;
+}
+
+.feature-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.feature-link:hover {
+    color: var(--color-primary-dark);
+    transform: translateX(4px);
 }
 
 .feature-icon {
@@ -937,4 +953,157 @@ img {
 .form-submit {
     text-align: center;
     margin-top: 40px;
+}
+
+/* Facility Page */
+.facility-section {
+    margin-bottom: 60px;
+}
+
+.facility-heading {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.facility-item {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.facility-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.facility-item h4 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.facility-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+}
+
+.facility-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.facility-features li:last-child {
+    border-bottom: none;
+}
+
+/* First Time Flow */
+.flow-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flow-step {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.flow-step:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+.flow-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.flow-content h4 {
+    color: var(--color-secondary);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.flow-content p {
+    margin-bottom: 8px;
+}
+
+/* Pass Cards */
+.pass-card {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.pass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Busy Hours Cards */
+.busy-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.busy-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.busy-card-header {
+    background: var(--color-primary);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.busy-card-body {
+    padding: 20px;
+}
+
+.busy-time {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+}
+
+.busy-desc {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
 }
