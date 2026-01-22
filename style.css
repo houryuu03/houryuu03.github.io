@@ -1107,3 +1107,9 @@ img {
     color: var(--color-text);
     margin-bottom: 4px;
 }
+
+/* Instagram Embed Height Limit */
+.instagram-media {
+    max-height: 600px !important;
+    overflow: hidden !important;
+}
